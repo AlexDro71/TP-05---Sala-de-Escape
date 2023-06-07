@@ -23,6 +23,25 @@ public class HomeController : Controller
 
     public IActionResult Habitacion(int sala, string clave)
     {
+        
+if(sala!=Escape.getEstadoJuego()){
+return View("sala"+Escape.getEstadoJuego());
+}else if(!Escape.ResolverSala(sala, clave)){
+    ViewBag.Error="El codigo no es correcto, vuelva a intentar";
+return View("sala"+Escape.getEstadoJuego());
+}else if(Escape.ResolverSala(sala, clave) && Escape.getEstadoJuego()==4){
+return View();
+}else{
+    return View();
+}
+
+
+
+
+
+
         return View();
     }
+    
 }
+
