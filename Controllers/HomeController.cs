@@ -15,12 +15,18 @@ public class HomeController : Controller
         return View();
     }
 
+        public IActionResult creditos()
+    {
+
+        return View();
+    }
     public IActionResult Comenzar()
     {
         int numSala = Escape.getEstadoJuego();
-        return View("sala" + numSala);
+        return View("sala" + (numSala + 1));
     }
 
+    
     public IActionResult Habitacion(int sala, string clave)
     {
         
