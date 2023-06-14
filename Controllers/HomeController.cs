@@ -23,7 +23,7 @@ public class HomeController : Controller
     public IActionResult Comenzar()
     {
         int numSala = Escape.getEstadoJuego();
-        return View("sala" + (numSala + 1));
+        return View("sala" + (numSala + 2));
     }
 
     

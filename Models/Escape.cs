@@ -26,6 +26,7 @@ if(incognitasSalas.Length < 1){
 if(estadoJuego != Sala){
 return false;
 }
+
 if(Incognita == incognitasSalas[Sala-1]){
 estadoJuego++;
 return true;
